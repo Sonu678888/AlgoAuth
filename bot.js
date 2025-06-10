@@ -88,8 +88,7 @@ const client = new Client({
     client.on("guildMemberAdd", async (member) => {
       try {
         await member.roles.add(ROLE_UNVERIFIED);
-      }
-       catch (e) {
+      } catch (e) {
         console.error("Error adding role:", e);
       }
 
@@ -99,8 +98,7 @@ const client = new Client({
         welcomeChannel.send(
           `👋 Welcome <@${member.id}>! Read the pinned message, then go to #verify.`
         );
-      } 
-      else {
+      } else {
         console.error("Go and get yourself verified !");
       }
     });
@@ -225,31 +223,4 @@ const client = new Client({
           );
 
           await interaction.editReply({
-            content: "🎉 You’re now verified! Go and explore the community",
-          });
-
-          const welcomeChannel = guild.channels.cache.get(WELCOME_CHANNEL_ID);
-          if (welcomeChannel?.isTextBased?.()) {
-            welcomeChannel.send(
-              `🎊 <@${interaction.user.id}> is now verified—welcome aboard!`
-            );
-          }
-        }
-      } catch (err) {
-        console.error("❌ Error handling interaction:", err);
-        if (interaction.isRepliable()) {
-          interaction.reply({
-            content: "⚠️ Something went wrong.",
-            ephemeral: true,
-          });
-        }
-      }
-    });
-
-    // Start the bot
-    console.log("  • Logging in Discord...");
-    await client.login(DISCORD_TOKEN);
-  } catch (err) {
-    console.error("❌ Error during startup:", err);
-  }
-})();
+            content: "🎉 You’re now verified! Go and explo
