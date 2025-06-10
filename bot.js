@@ -223,44 +223,4 @@ const client = new Client({
           );
 
           await interaction.editReply({
-            content: "🎉 You’re now verified! Go and explore the community",
-          });
-
-          const welcomeChannel = guild.channels.cache.get(WELCOME_CHANNEL_ID);
-          if (welcomeChannel?.isTextBased?.()) {
-            welcomeChannel.send(
-              `🎊 <@${interaction.user.id}> is now verified—welcome aboard!`
-            );
-          }
-        }
-      } catch (err) {
-        console.error("❌ Error handling interaction:", err);
-        if (interaction.isRepliable()) {
-          interaction.reply({
-            content: "⚠️ Something went wrong.",
-            ephemeral: true,
-          });
-        }
-      }
-    });
-
-    // Start the bot
-    console.log("  • Logging in Discord...");
-    await client.login(DISCORD_TOKEN);
-  } 
-  catch (err) {
-    console.error("❌ Error during startup:", err);
-  }
-})();
-
-const express = require("express");
-const app = express();
-
-app.get("/", (req, res) => {
-  res.send("✅ Discord bot is running!");
-});
-
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`🌐 Algoauth server listening on port ${PORT}`);
-});
+            content: "🎉 You’re now verified! Go and explo

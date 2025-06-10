@@ -2,8 +2,8 @@
   "name": "algopathdiscord",
   "version": "1.0.0",
   "main": "bot.js",
-  "start": "node bot.js",
   "scripts": {
+    "start": "node bot.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -16,4 +16,4 @@
     "express": "^5.1.0",
     "nodemailer": "^7.0.3",
     "sqlite": "^5.1.1",
-    "
+   
